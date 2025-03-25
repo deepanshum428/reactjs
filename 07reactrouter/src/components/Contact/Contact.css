@@ -1,0 +1,53 @@
+.contact-container {
+  max-width: 400px;
+  height: auto;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(231, 240, 248);
+  display: flex;
+  flex-direction: column;
+  /* outline: 1px solid red; */
+  margin-inline: auto;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.contact-container h1 {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.contact-container form {
+  display: contents;
+}
+
+.contact-container > form > label,
+input,
+button {
+  margin-top: 20px;
+  border-radius: 4px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  background-color: rgba(255, 255, 255, 0.845);
+  text-align: center;
+  height: 40px;
+}
+
+input {
+  background-color: transparent;
+  text-align: center;
+  border: 2px solid black;
+  height: 30px;
+}
+
+button {
+  background-color: rgb(79, 187, 79);
+  height: 35px;
+}
