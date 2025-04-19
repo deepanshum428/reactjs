@@ -1,15 +1,33 @@
+.main-div {
+  background-image: url(https://img.freepik.com/free-photo/old-wood-background_1232-2571.jpg?t=st=1742923181~exp=1742926781~hmac=80f872abcd02de2f2924c2ae811cd2e8982173c8d2639889c74fe3e252f63997&w=1380);
+  /* height: 50vh; */
+  padding: 10px;
+  height: 80vh;
+}
+
 .contact-container {
-  max-width: 400px;
   height: auto;
+  width: 30%;
+  max-width: 50%;
   margin: 1rem;
   padding: 1rem;
-  background-color: rgb(231, 240, 248);
+  background-color: #c19b6c08;
   display: flex;
   flex-direction: column;
   /* outline: 1px solid red; */
   margin-inline: auto;
+  margin-top: 5rem;
   align-items: center;
   border-radius: 4px;
+  box-shadow: 10px 10px 10px 4px #e4ae6c08;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-bottom: 1px solid #ffffff20;
+  border-right: 1px solid #ffffff20;
+}
+
+.heading {
+  color: whitesmoke;
 }
 
 .contact-container h1 {
@@ -26,28 +44,38 @@
 .contact-container > form > label,
 input,
 button {
-  margin-top: 20px;
   border-radius: 4px;
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: whitesmoke;
 }
 
 label {
-  background-color: rgba(255, 255, 255, 0.845);
+  background-color: #855e42;
   text-align: center;
   height: 40px;
+  margin-top: 15px;
+  color: aliceblue;
 }
 
 input {
-  background-color: transparent;
+  background-color: whitesmoke;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   height: 30px;
+  margin-top: 5px;
+  color: black;
 }
 
 button {
   background-color: rgb(79, 187, 79);
   height: 35px;
+  margin-top: 15px;
+  border-radius: 50px;
+  width: 30%;
+}
+button:hover {
+  cursor: pointer;
 }
