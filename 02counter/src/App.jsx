@@ -25,6 +25,7 @@ function App() {
     console.log(previous);
   };
   const removeValue = () => {
+    if (counter === 0) return;
     setCount(counter - 1);
     console.log("start6");
   };
