@@ -1,17 +1,39 @@
 import { useEffect, useState } from "react";
 
-function useCurrencyInfo(currency) {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    fetch(
-      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@2024-03-06/v1/currencies/${currency}.json`
-    )
-      .then((res) => res.json())
-      .then((res) => setData(res[currency]));
-  }, [currency]);
+function useFetchData() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  console.log(data);
-  return data;
+  useEffect(() => {
+    let isMounted = true;
+
+    fetch("https://mxpertztestapi.onrender.com/api/sciencefiction")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        return res.json();
+      })
+      .then((result) => {
+        if (isMounted) {
+          setData(result);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          setError(err.message);
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  return { data, loading, error };
 }
 
-export default useCurrencyInfo;
+export default useFetchData;
